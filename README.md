@@ -1,4 +1,4 @@
-# github - 수정필요
+# github
 
 https://github.com/chk386/notifications
 
@@ -148,13 +148,17 @@ public interface Publisher<T> {
 
 public interface Subscriber<T> {
   void onSubscribe(Subscription s);
+
   void onNext(T t);
+
   void onError(Throwable t);
+
   void onComplete();
 }
 
 public interface Subscription {
   void request(long n);
+
   void cancel();
 }
 ```
@@ -170,7 +174,7 @@ callback을 이용한 비동기 프로그래밍(observer pattern)으로도 흐�
 
 #### 패러다임의 변화
 
-sync nonblocking -> async nonblocking -> reactive
+sync blocking -> async nonblocking -> reactive
 
 - javascript - promise, await-async(ES 2017)
 - php - await, async
@@ -284,3 +288,16 @@ docker exec -it kafka /bin/bsh
 3. 데모 페이지
     1. http://133.186.247.62:8080/sse.html
     1. http://133.186.247.62:8080/websocket.html
+
+# 생각해봐야 할 것들
+
+- admin접속이 많아지면 Notification서버 1대로 불가능하며 consumer-group-id를 서버수 만큼 늘려야한다.
+- 대량 채팅(네이버톡톡)기능으로 사용하기엔 부족하다. 두레이처럼 akka로 구축?
+- 유실을 허용한다면 redis pub/sub도 괜찮은 solution
+- reactive 드라이버를 지원하는 mongoDB의 change stream기능도 고려해볼 필요가 있다. 실시간성과 영속성을 모두
+  만족 [링크](https://docs.mongodb.com/manual/changeStreams)
+- 샵바이 개발파트너사에 notification api 개방
+- 성능테스트는 안해봤음. 실무자가 해야함 ㅋ
+
+
+
