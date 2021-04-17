@@ -283,10 +283,6 @@ docker exec -it kafka /bin/bsh
 3. 데모 페이지
     1. http://133.186.247.62:8080/sse.html
     1. http://133.186.247.62:8080/websocket.html
-   
-
-
-   
 
 
 
