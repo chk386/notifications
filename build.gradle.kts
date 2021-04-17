@@ -43,10 +43,3 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-
-// https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/gradle-plugin/reference/html/#build-image
-// docker image tag shopby-notification:latest chk386/notification:latest
-// docker login
-// docker image push chk386/notification
-// https://hub.docker.com/repository/docker/chk386/notification
-// docker run -p 8080:8080 chk386/notification
