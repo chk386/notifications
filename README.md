@@ -266,6 +266,7 @@ docker image push ${본인의 dockerhub ID}/notification
 docker-compose -f docker-compose-nhncloud.yml up
 docker run -d -e "SPRING_PROFILES_ACTIVE=cloud" -p 8080:8080 chk386/notification 
 
+# 브로커
 docker exec -it kafka /bin/bsh
 
 # 토픽생성
@@ -283,9 +284,3 @@ docker exec -it kafka /bin/bsh
 3. 데모 페이지
     1. http://133.186.247.62:8080/sse.html
     1. http://133.186.247.62:8080/websocket.html
-
-
-
-
-
-
