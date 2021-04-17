@@ -235,7 +235,7 @@ The Sinks categories are:
 
 ## 시스템 구성
 
-![구성도](assets/diagram.png)
+![구성도](https://raw.githubusercontent.com/chk386/notifications/master/assets/diagram.png)
 
 ## 코드 설명
 
