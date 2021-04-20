@@ -1,6 +1,7 @@
 package kr.co.shopby.notifications
 
 import kr.co.shopby.notifications.configuration.Topic
+import kr.co.shopby.notifications.example.SampleHandler
 import kr.co.shopby.notifications.handler.SseHandler
 import kr.co.shopby.notifications.handler.WebsocketHandler
 import org.springframework.boot.ApplicationRunner
@@ -27,7 +28,7 @@ fun main(args: Array<String>) {
 
 @SpringBootApplication
 @EnableWebFlux
-class NotificationsApplication: WebFluxConfigurer {
+class NotificationsApplication : WebFluxConfigurer {
 
   @Bean
   @Profile("default")
@@ -63,8 +64,10 @@ class NotificationsApplication: WebFluxConfigurer {
    * @see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-websocket-server-handler">참고</a>
    */
   @Bean
-  fun handlerMapping(websocketHandler: WebsocketHandler): HandlerMapping {
-    val map = mapOf("/ws" to websocketHandler)
+  fun handlerMapping(websocketHandler: WebsocketHandler, sampleHandler: SampleHandler): HandlerMapping {
+    val map = mapOf(
+      "/ws" to websocketHandler, "/ws2" to sampleHandler
+    )
     val order = -1 // before annotated controllers
 
     return SimpleUrlHandlerMapping(map, order)
