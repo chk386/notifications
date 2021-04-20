@@ -266,11 +266,11 @@ docker image push ${본인의 dockerhub ID}/notification
 2. docker
 
 ```shell
-# ssh 서버접속
+# 인스턴스에 ssh 서버접속 후 실행
 docker-compose -f docker-compose-nhncloud.yml up
 docker run -d -e "SPRING_PROFILES_ACTIVE=cloud" -p 8080:8080 chk386/notification 
 
-# 브로커
+# 카프카 토픽 & 메세지 생성시
 docker exec -it kafka /bin/bsh
 
 # 토픽생성
