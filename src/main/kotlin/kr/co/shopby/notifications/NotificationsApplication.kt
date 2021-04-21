@@ -74,5 +74,5 @@ class NotificationsApplication : WebFluxConfigurer {
   }
 
   @Bean
-  fun handlerAdapter() = WebSocketHandlerAdapter();
+  fun handlerAdapter() = WebSocketHandlerAdapter()
 }
