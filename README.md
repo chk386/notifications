@@ -1,7 +1,3 @@
-# github
-
-https://github.com/chk386/notifications
-
 # 배경
 
 최근 엑셀다운로드 기능이 sync에서 async로 변경되었다. 이로 인해 서버는 안정을 찾았고 우리는 편해졌으나 고객은 다운로드 완료시점을 알지 못하여 불편해졌다.
