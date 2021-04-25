@@ -299,5 +299,17 @@ docker exec -it kafka /bin/bsh
 - 샵바이 개발파트너사에 notification api 개방
 - 성능테스트는 안해봤음. 실무자가 해야함 ㅋ
 
+# 참고자료
+- What is Http : https://www.concurrency.com/blog/june-2019/why-http-is-not-suitable-for-iot-applications
+- Keep-Alive : https://velog.io/@yvvyoon/keep-alive
+- Long Polling : https://medium.com/ably-realtime/websockets-vs-long-polling-55bdf09a7268
+- Server Sent Events: https://systemdesignbasic.wordpress.com/2020/02/01/12-long-polling-vs-websockets-vs-server-sent-events/
+- Send JSON Data : https://hamait.tistory.com/792
+- Websocket : https://kouzie.github.io/spring/Spring-Boot-%EC%8A%A4%ED%94%84%EB%A7%81-%EB%B6%80%ED%8A%B8-WebSocket/#websocket-client
+- Sync vs Async : https://velog.io/@goblin820/TIL-3-Sync-vs-Async-Blocking-vs-Non-Blocking
+- Stream Processing : https://engineering.linecorp.com/ko/blog/reactive-streams-with-armeria-1/
+- Reactor : https://projectreactor.io
+
+
 
 
