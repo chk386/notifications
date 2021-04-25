@@ -293,7 +293,6 @@ docker exec -it kafka /bin/bsh
 - reactive 드라이버를 지원하는 mongoDB의 change stream기능도 고려해볼 필요가 있다. 실시간성과 영속성을 모두
   만족 [링크](https://docs.mongodb.com/manual/changeStreams)
 - 샵바이 개발파트너사에 notification api 개방
-- 성능테스트는 안해봤음. 실무자가 해야함 ㅋ
 
 # 참고자료
 - What is Http : https://www.concurrency.com/blog/june-2019/why-http-is-not-suitable-for-iot-applications
