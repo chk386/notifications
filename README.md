@@ -225,7 +225,7 @@ docker exec -it kafka /bin/bsh
 
 ## 생각해봐야 할 것들
 
-- 유실을 허용한다면 redis pub/sub도 괜찮은 방법인듯 하다
+- 유실을 허용한다면 redis pub/sub도 괜찮은 방법
 - 현재 백오피스 고객이 2000을 넘지 않기에 Notification서버 1대로 운영이 충분히 가능
 - 만약 동접이 더 많아지면 웹소켓 서버를 여러대 두어 라우팅 전략 짜야함
 - reactive 드라이버를 지원하는 mongoDB의 change stream기능도 고려해볼 필요가 있다. 실시간성과 영속성을 모두
